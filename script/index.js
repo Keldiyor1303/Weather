@@ -85,22 +85,27 @@ function renderDay(list) {
 
     day2.addEventListener("click", function () {
         renderList(birinchi)
+        hidden()
     })
 
     day3.addEventListener("click", function () {
         renderList(ikkinchi)
+        hidden()
     })
 
     day4.addEventListener("click", function () {
         renderList(uchinchi)
+        hidden()
     })
 
     day5.addEventListener("click", function () {
         renderList(turtinchi)
+        hidden()
     })
 
     day6.addEventListener("click", function () {
         renderList(beshinchi)
+        hidden()
     })
 }
 
