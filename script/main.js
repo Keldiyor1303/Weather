@@ -3,7 +3,6 @@ let lon = 69
 let apiKey = "956d8530de044c974cf895d490c8b058"
 
 
-
 const getWeather = async function () {
 
     if (navigator.geolocation) {
@@ -16,7 +15,7 @@ const getWeather = async function () {
         })
     }
 
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`)
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`)
 
     const data = await response.json()
 
@@ -40,7 +39,7 @@ function renderList(data) {
 
                 <div class="temp">
                     <p>${element["dt_txt"]}</p>
-                    <h3>${(element.main.temp - 273).toFixed(0)}°</h3>
+                    <h3>${(element.main.temp).toFixed(0)}°</h3>
                     <h4>${element.weather[0].main}</h4>
 
                     <div class="wind">
